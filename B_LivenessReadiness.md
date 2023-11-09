@@ -33,3 +33,5 @@ spec:
       initialDelaySeconds: 5
       periodSeconds: 5
 ```
+
+Wie oben ersichtlich, haben wir folgenden command: ```yaml cat /tmp/healthy```. 
