@@ -35,7 +35,7 @@ spec:
 ```
 
 Wie oben ersichtlich, haben wir folgenden command: ```yaml /bin/sh -c "touch /tmp/healthy; sleep 30; rm -f /tmp/healthy; sleep 600" ```. Dies erstellt zuerst ein leeres File ```yaml /tmp/healthy ```.
-Danach definiert es, dass es 30 Sekunden warten soll, bis es mit dem nächsten Befehl weitermachen soll. Nach den 30 Sekunden löscht es das File im Verzeichnis /tmp. Das ```yaml sleep 600``` können wir ignorieren. Dies bedeutet lediglich, dass es dann 10 Minuten wartet, bevor der Befehl beendet wird.
+Danach definiert es, dass es 30 Sekunden warten soll, bis es mit dem nächsten Befehl weitermachen soll. Nach den 30 Sekunden löscht es das File im Verzeichnis /tmp. Das ```yaml sleep 600```können wir ignorieren. Dies bedeutet lediglich, dass es dann 10 Minuten wartet, bevor der Befehl beendet wird.
 Somit haben wir kurzgefasst, ein File, welches 30 Sekunden besteht.
 
 Da wir den Befehl ```yaml cat /tmp/healthy``` haben, erhalten wir jede 5 Sekunden (definiert im Feld "periodSecons"), einen Erfolg retourniert. Doch nach 35 Sekunden, wenn das File gelöscht wird, erhalten wir mit dem gleichen Befehl einen gescheiterten Versuch, da das File nicht mehr exisiert.
