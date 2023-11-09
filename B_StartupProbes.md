@@ -30,3 +30,6 @@ startupProbe:
   failureThreshold: 30
   periodSeconds: 10
 ```
+Hier ist zu sehen, wie die Startup-Probe der Anwendung genügend Zeit gibt, um sich beim Start zu initialisieren. Wenn dies innerhalb von 5 Minuten nicht gelingt, wird der Container als nicht erfolgreich betrachtet und kann gemäss den Neustartrichtlinien des Pods neu gestartet oder beendet werden.
+Sobald die Startup-Probe erfolgreich war, wird die Liveness-Probe verwendet, um sicherzustellen, dass der Container während seines normalen Betriebs ordnungsgemäss funktioniert.
+Wenn die Liveness-Probe fehlschlägt, wird der Container als nicht gesund betrachtet und kann neu gestartet werden.
