@@ -40,6 +40,8 @@ Somit haben wir kurzgefasst, ein File, welches 30 Sekunden besteht.
 
 Da wir den Befehl ```yaml cat /tmp/healthy``` haben, erhalten wir jede 5 Sekunden (definiert im Feld "periodSecons"), einen Erfolg retourniert. Doch nach 35 Sekunden, wenn das File gelöscht wird, erhalten wir mit dem gleichen Befehl einen gescheiterten Versuch, da das File nicht mehr exisiert.
 
-Das Ganze sieht im GUI nach ungefähr 30 Sekunden wie folgt aus:
+Das Ganze sieht im GUI nach ungefähr 40 Minuten wie folgt aus:
 
-![image](https://github.com/Andreeyy/Aufgabe-B---Liveness-Readiness/assets/64062748/ee11514b-5192-4168-90c3-dfa6b0410fb6)
+![image](https://github.com/Andreeyy/Aufgabe-B---Liveness-Readiness/assets/64062748/cc9e0c2c-4f6d-4b57-8a55-74fac1737c00)
+
+Wir sehen hier, dass es bereits 15 Mal neugestartet hat. Ausserdem können wir mit dem Befehl ```yaml kubectl describe pod liveness-exec ``` jeweils das Geschehen sozusagen "Live" anschauen.
