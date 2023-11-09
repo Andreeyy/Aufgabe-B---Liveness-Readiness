@@ -10,6 +10,7 @@ Mit Kubernetes können wir uns diese Fälle etwas vereinfachen. Kubernetes biete
 
 Mit dem folgenden Befehl können wir einen Pod erstellen, der einen Container ausführt:
 
+```yaml
 apiVersion: v1
 kind: Pod
 metadata:
@@ -31,3 +32,4 @@ spec:
         - /tmp/healthy
       initialDelaySeconds: 5
       periodSeconds: 5
+```
