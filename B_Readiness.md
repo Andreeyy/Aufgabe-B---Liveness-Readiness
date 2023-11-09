@@ -23,18 +23,18 @@ readinessProbe:
   periodSeconds: 5
 ```
 
-Das Ganze würde demzufolge wie folgt aussehen:
+Das Ganze würde dann wie folgt aussehen:
 
-```yaml 
+```yaml
 apiVersion: v1
 kind: Pod
 metadata:
   labels:
-    test: liveness
-  name: liveness-exec
+    test: readiness
+  name: readiness-exec
 spec:
   containers:
-  - name: liveness
+  - name: readiness
     image: registry.k8s.io/busybox
     args:
     - /bin/sh
@@ -42,9 +42,12 @@ spec:
     - touch /tmp/healthy; sleep 30; rm -f /tmp/healthy; sleep 600
     readinessProbe:
       exec:
-      command:
-      - cat
-      - /tmp/healthy
-    initialDelaySeconds: 5
-    periodSeconds: 5
+        command:
+        - cat
+        - /tmp/healthy
+      initialDelaySeconds: 5
+      periodSeconds: 5
 ```
+
+Wichtig zu erwähnen ist noch, dass die Readiness und die Liveness Probe parallel für den selben Container benutzt werden können. Somit hätten wir dann gleich beide Eigenschaften vorhanden: Wir stellen sicher, dass kein Datenverkehr den Container erreichen kann, wenn er nicht dafür bereit ist 
+und dass der Container neu gestartet wird, wenn es fehlschlägt.
