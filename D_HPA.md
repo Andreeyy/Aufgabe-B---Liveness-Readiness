@@ -1,4 +1,10 @@
-# Horizontal Pod Autoscaler
+# Aufgabe B - Liveness, Readiness
+
+## Links
+- [Link zu den Ressourcen im GitLab](https://gitlab.com/ch-tbz-hf/Stud/v-cnt/-/tree/main/2_Unterrichtsressourcen/B)
+- [Link zur Kubernetes-Oberfläche](https://10.5.38.10:8443/#/create?namespace=default)
+
+## Horizontal Pod Autoscaler
 
 Um einen Horizontal Pod Autoscaler zu erstellen, musste von uns zuerst einige Theorie aufgenommen werden, um das Ganze zu verstehen. Ein HorizontalPodAutoscaler ist ein Mechanismus in Kubernetes, der automatisch eine Arbeitslastsressource aktualisiert. 
 Das Hauptziel besteht darin, die Arbeitslast automatisch zu skalieren, um der Nachfrage gerecht zu werden. Horizontales Skalieren bedeutet, dass die Reaktion auf eine erhöhte Last darin besteht, mehr Pods bereitzustellen. 
