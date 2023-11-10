@@ -72,6 +72,20 @@ Das ganze sieht dann so aus:
 Zusammenfassend wurden nun die in der YAML-Datei unter der angegebenen URL definierten Ressourcen im Kubernetes-Cluster erstellt. Die Warnungen weisen nur darauf hin, dass bestimmte Annotations fehlen, aber das System wird versuchen, sie automatisch zu ergänzen.
 Somit können wir die Warnungen vorerst Mal ignorieren.
 
+### Erstellung des HPA
+Wir haben oben nun den Server zum Laufen gebracht, somit können wir nun den HPA erstellen. Wir wollen den HPA so konfigurieren, um die Anzahl der Pods zwischen 1 und 10 zu skalieren, je nach dem wie die CPU-Auslastung ist. Dies machen wir mit folgendem Befehl:
+```yaml kubectl autoscale deployment php-apache --cpu-percent=50 --min=1 --max=10 ```
+
+Um den Status anzeigen zu lassen, können wir im Terminal den Befehl ```yaml kubectl get hpa ``` eingeben:
+![image](https://github.com/Andreeyy/Aufgabe-B---Liveness-Readiness/assets/64062748/2a776fe8-4c92-4ddc-9d87-5ce6ab1b6cb7)
+
+
+
+![image](https://github.com/Andreeyy/Aufgabe-B---Liveness-Readiness/assets/64062748/364f3c1a-df35-410f-86e4-482832e88c70)
+
+
+
+
 
 
 
