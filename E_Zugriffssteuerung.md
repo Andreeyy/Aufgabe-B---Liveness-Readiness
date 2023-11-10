@@ -49,6 +49,7 @@ rules:
 Um die Rolle an den User zu binden, würden wir diesen Befehl nutzen: ```yaml kubectl create rolebinding rolebindingname --role andre-pods --user andre ```
 
 Im nächsten Schritt würden wir den User authentifizieren, dafür gibt es verschiedene Wege. Am besten generieren wir den Private Key und das User-Zertifikat am Terminal:
+
 ![image](https://github.com/Andreeyy/Aufgabe-B---Liveness-Readiness/assets/64062748/0e56984d-7430-424b-a6f6-afb3b81b9ae5)
 
 Mit dem Befehl ```yaml cat andre.csr ``` können wir das Zertifikat dann anschauen:
