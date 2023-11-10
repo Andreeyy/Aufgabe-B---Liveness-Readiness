@@ -62,6 +62,21 @@ Den Pod:
 Und auch den Service:
 ![image](https://github.com/Andreeyy/Aufgabe-B---Liveness-Readiness/assets/64062748/1cc5c1f5-63aa-4437-8c4a-2e790e2f470c)
 
+### Bereitstellung der Anwendung
+Um die Anwendung nun in Kubernetes bereitzustellen, laden wir die Ressourcendefinitionen aus der YAML-Datei aus. Dies machen wir mit folgendem Befehl im Terminal:
+```yaml kubectl apply -f https://k8s.io/examples/application/php-apache.yaml ```
+
+Das ganze sieht dann so aus:
+![image](https://github.com/Andreeyy/Aufgabe-B---Liveness-Readiness/assets/64062748/b638b4ac-53ce-423a-8c8b-bd9a9891770e)
+
+Zusammenfassend wurden nun die in der YAML-Datei unter der angegebenen URL definierten Ressourcen im Kubernetes-Cluster erstellt. Die Warnungen weisen nur darauf hin, dass bestimmte Annotations fehlen, aber das System wird versuchen, sie automatisch zu ergänzen.
+Somit können wir die Warnungen vorerst Mal ignorieren.
+
+
+
+
+
+
 
 
 
