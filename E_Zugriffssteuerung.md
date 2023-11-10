@@ -52,6 +52,7 @@ Im nächsten Schritt würden wir den User authentifizieren, dafür gibt es versc
 ![image](https://github.com/Andreeyy/Aufgabe-B---Liveness-Readiness/assets/64062748/0e56984d-7430-424b-a6f6-afb3b81b9ae5)
 
 Mit dem Befehl ```yaml cat andre.csr ``` können wir das Zertifikat dann anschauen:
+
 ![image](https://github.com/Andreeyy/Aufgabe-B---Liveness-Readiness/assets/64062748/14ef867e-8e9d-472b-ac0a-fb081bce57ca)
 
 Zu letzt können wir dann einen lokalen kubectl config mit folgendem Befehl erstellen: ```yaml microk8s config ```
