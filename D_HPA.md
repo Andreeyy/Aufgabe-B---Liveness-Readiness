@@ -87,8 +87,3 @@ Um den Status anzeigen zu lassen, können wir im Terminal den Befehl ```yaml kub
 
 
 
-
-
-
-
-
