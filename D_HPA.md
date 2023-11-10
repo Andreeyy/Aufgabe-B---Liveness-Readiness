@@ -79,6 +79,18 @@ Wir haben oben nun den Server zum Laufen gebracht, somit können wir nun den HPA
 Um den Status anzeigen zu lassen, können wir im Terminal den Befehl ```yaml kubectl get hpa ``` eingeben:
 ![image](https://github.com/Andreeyy/Aufgabe-B---Liveness-Readiness/assets/64062748/2a776fe8-4c92-4ddc-9d87-5ce6ab1b6cb7)
 
+Das "unknown" im Kontext der CPU-Auslastung für die Deployments könnte darauf hinweisen, dass der HorizontalPodAutoscaler (HPA) Schwierigkeiten hat, die tatsächliche CPU-Auslastung der Pods zu bestimmen. Dies kann mehrere Gründe haben.
+In den Events sehen wir die Meldung "FailedGetRersourceMetric". Die Meldung "FailedGetResourceMetric" weist darauf hin, dass der HorizontalPodAutoscaler (HPA) Schwierigkeiten hat, Metriken für die Ressource "cpu" zu erhalten.
+![image](https://github.com/Andreeyy/Aufgabe-B---Liveness-Readiness/assets/64062748/6a9d220f-cf28-46c1-b7c3-c7ec208920b9)
+
+Daher habe ich versucht, diesen zu installieren, jedoch erfolglos, da er vermutlich bereits drauf ist:
+![image](https://github.com/Andreeyy/Aufgabe-B---Liveness-Readiness/assets/64062748/a26e0403-58bc-4208-a62e-7725e1ca7cc7)
+
+Nichtsdestotrotz, nehmen wir an, dass anstatt unknown, dort 0% steht. Es ist nun möglich, die Last eines anderen Pods mit folgendem Befehl zu erhöhen:
+```yaml kubectl run -i --tty load-generator --rm --image=busybox:1.28 --restart=Never -- /bin/sh -c "while sleep 0.01; do wget -q -O- http://php-apache; done" ```
+
+Wenn dies gemacht wird, kann man mit dem Befehl: ```yaml kubectl get hpa php-apache --watch ``` sehen, dass nun anstatt 0% dort etwa 305% stehen würde. 
+
 
 
 
