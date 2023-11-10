@@ -81,8 +81,6 @@ Um den Status anzeigen zu lassen, können wir im Terminal den Befehl ```yaml kub
 
 
 
-![image](https://github.com/Andreeyy/Aufgabe-B---Liveness-Readiness/assets/64062748/364f3c1a-df35-410f-86e4-482832e88c70)
-
 
 
 
