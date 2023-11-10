@@ -1,4 +1,4 @@
-# Aufgabe B - Liveness, Readiness
+# Aufgabe D - Horizontal Pod Autoscaler
 
 ## Links
 - [Link zu den Ressourcen im GitLab](https://gitlab.com/ch-tbz-hf/Stud/v-cnt/-/tree/main/2_Unterrichtsressourcen/D)
